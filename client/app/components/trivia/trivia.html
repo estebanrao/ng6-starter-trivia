@@ -1,0 +1,16 @@
+<p class="trivia__points">Por {{ vm.puntos }} puntos</p>
+<p class="trivia__question">{{ vm.preguntas[vm.preguntaNumero].pregunta }}</p>
+
+<ul class="trivia__answers-list">
+  <li ng-repeat="respuestas in vm.preguntas[vm.preguntaNumero].respuestas">
+    <a class="btn trivia__answer" ng-click="vm.sendRespuesta($index)"><span class="btn__bullet"></span>{{ respuestas.respuesta }}</a>
+  </li>
+</ul>
+
+<ul class="trivia__info-list">
+  <li class="trivia__info-item"><span class="trivia__info-icon trivia__info-icon--correctas"></span><span>{{ vm.respuestasCorrectas }}</span></li>
+  <li class="trivia__info-item"><span class="trivia__info-icon trivia__info-icon--incorrectas"></span><span>{{ vm.respuestasIncorrectas }}</span></li>
+  <li class="trivia__info-item"><span class="trivia__info-icon trivia__info-icon--bonus"></span><span>{{ vm.respuestasBonus }}</span></li>
+</ul>
+
+<p class="trivia__info-item trivia__info-item--time"><span class="trivia__info-icon trivia__info-icon--tiempo"></span><span>{{ vm.timerMinutes }}:{{ vm.timerSeconds }}</span></p>

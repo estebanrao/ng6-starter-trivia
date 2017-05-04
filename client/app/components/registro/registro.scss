@@ -1,0 +1,74 @@
+@import 'variables';
+
+.main-content-registro {
+  background: $registro-bg url(images/bg-registro.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 57rem;
+}
+
+  .registro-form {
+    box-sizing: border-box;
+    padding: 2rem 4rem 0;
+    max-width: 54rem;
+    width: 100%;
+  }
+
+    .registro-form__item {
+      padding-bottom: .8rem;
+    }
+
+      .registro-form__input--text,
+      .registro-form__input--checkbox {
+        background: $registro-input-bg;
+        border: .1rem solid $registro-input-border;
+      }
+
+    .registro-form__label {
+      align-items: center;
+      display: flex;
+      font-size: 1.3rem;
+      height: 4rem;
+      justify-content: center;
+
+      a {
+        border-bottom: 1px solid $body-text;
+      }
+    }
+
+@media (min-width: $screen-sm-min) {
+
+  .main-content-registro {
+    min-height: 82rem;
+  }
+
+    .registro-form {
+      max-width: 67rem;
+    }
+
+      .registro-form__column-container {
+        display: flex;
+        flex-direction: row;
+
+        > ul {
+          flex-grow: 1;
+          padding: 0 1.5rem;
+        }
+      }
+
+        .registro-form__item {
+          padding-bottom: 1.2rem;
+        }
+
+        .registro-form__label {
+          font-size: 1.6rem;
+        }
+
+}
+
+@media (min-width: $screen-md-min) {
+
+  .main-content-registro {
+    min-height: 60rem;
+  }
+
+}

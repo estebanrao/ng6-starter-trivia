@@ -1,0 +1,31 @@
+@import 'variables';
+
+.main-content-home {
+  background: $home-bg url(images/bg-home.jpg) no-repeat center;
+  background-size: cover;
+}
+
+  .main-content-home__upper {
+    font-size: 1.2rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+  }
+
+  .main-content-home__title {
+    padding: 1.8rem 0;
+    width: 24rem;
+  }
+
+@media (min-width: $screen-sm-min) {
+
+  .main-content-home__upper {
+    font-size: 2.5rem;
+    letter-spacing: .7rem;
+  }
+
+  .main-content-home__title {
+    width: 62rem;
+  }
+
+}

@@ -1,0 +1,37 @@
+<h2>Registrá tus datos</h2>
+<h3>Completá el siguiente formulario para participar:</h3>
+
+<form  name="registroForm" ng-submit="vm.submitForm(registroForm.$valid)" class="registro-form" novalidate>
+  <div class="registro-form__column-container">
+    <ul>
+      <li class="registro-form__item">
+        <input type="text" class="input--text registro-form__input--text" id="" name="nombre" ng-model="vm.form.nombre" placeholder="Nombre" tabindex="1" ng-required="true">
+      </li>
+      <li class="registro-form__item">
+        <input type="text" class="input--text registro-form__input--text" id="" name="apellido" ng-model="vm.form.apellido" placeholder="Apellido" tabindex="2" ng-required="true">
+      </li>
+      <li class="registro-form__item">
+        <input type="email" class="input--text registro-form__input--text" id="" name="email" ng-model="vm.form.email" placeholder="Email" tabindex="3" ng-required="true">
+      </li>
+    </ul>
+    <ul>
+      <li class="registro-form__item">
+        <input type="text" class="input--text registro-form__input--text" id="" name="dni" ng-model="vm.form.dni" placeholder="DNI" tabindex="4" ng-required="true">
+      </li>
+      <li class="registro-form__item">
+        <input type="text" class="input--text registro-form__input--text" id="" name="telefono" ng-model="vm.form.telefono" placeholder="Teléfono" tabindex="5" ng-required="true">
+      </li>
+      <li class="registro-form__item">
+        <input type="text" class="input--text registro-form__input--text" id="" name="medio" ng-model="vm.form.medio" placeholder="Medio en el que trabaja" tabindex="6" ng-required="true">
+      </li>
+    </ul>
+  </div>
+  <label class="registro-form__label">
+    <input type="checkbox" checked class="input--checkbox registro-form__input--checkbox" name="byc" ng-model="vm.form.byc" tabindex="7" ng-required="true">
+    <span>Acepto <a href="/bases-y-condiciones.html" target="_blank">Bases y condiciones</a></span>
+  </label>
+
+  <br>
+
+  <button class="btn" tabindex="8" ng-disabled="registroForm.$invalid"><span class="btn__bullet"></span>Continuar</button>
+</form>

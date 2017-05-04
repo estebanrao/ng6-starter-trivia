@@ -1,0 +1,124 @@
+@import 'variables';
+@import 'mixins';
+
+.main-content-resultado {
+  background: $registro-bg url(images/bg-registro.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 43rem;
+}
+
+  .resultado-info__list {
+    clear: both;
+    padding: 2.5rem 0 11.0rem;
+    position: relative;
+    width: 28rem;
+  }
+
+    .resultado-info__item {
+      @include sprite-background('images/resultado-info-bg.png');
+      display: flex;
+      flex-direction: column;
+      height: 13.2rem;
+      justify-content: center;
+      text-indent: 0;
+      width: 13.2rem;
+
+      &--left {
+        float: left;
+      }
+
+      &--right {
+        float: right;
+      }
+    }
+
+      .resultado-info__title {
+        color: $resultado-info-title;
+        font-size: 1.1rem;
+      }
+
+      .resultado-info__info {
+        color: $resultado-info-info;
+        font-size: 3.5rem;
+        padding-top: .8rem;
+      }
+
+    .resultado-mascota {
+      @include sprite-background('images/mascota-01.png');
+      bottom: 0;
+      height: 12.9rem;
+      left: 50%;
+      margin-left: -4.25rem;
+      position: absolute;
+      width: 8.5rem;
+    }
+
+@media (min-width: $screen-sm-min) {
+
+  .main-content-resultado {
+    min-height: 82rem;
+  }
+
+    .resultado-info__list {
+      padding: 3rem 0 26rem;
+      width: 51rem;
+    }
+
+      .resultado-info__item {
+        height: 23rem;
+        width: 23rem;
+      }
+
+        .resultado-info__title {
+          font-size: 1.7rem;
+        }
+
+        .resultado-info__info {
+          font-size: 6.8rem;
+          padding-top: 1.5rem;
+        }
+
+      .resultado-mascota {
+        bottom: -5rem;
+        height: 30.6rem;
+        left: 50%;
+        margin-left: -10.15rem;
+        width: 20.3rem;
+      }
+
+}
+
+@media (min-width: $screen-md-min) {
+
+  .main-content-resultado {
+    min-height: 60rem;
+  }
+
+    .resultado-info__list {
+      padding: 9rem 0;
+      width: 58rem;
+    }
+
+      .resultado-info__item {
+        height: 19rem;
+        width: 19rem;
+      }
+
+        .resultado-info__title {
+          font-size: 1.7rem;
+        }
+
+        .resultado-info__info {
+          font-size: 5.5rem;
+          padding-top: 1.5rem;
+        }
+
+      .resultado-mascota {
+        bottom: -2rem;
+        height: 36.4rem;
+        left: 50%;
+        margin-left: -12.1rem;
+        width: 24.2rem;
+      }
+
+}

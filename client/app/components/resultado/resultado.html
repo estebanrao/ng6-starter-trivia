@@ -1,0 +1,16 @@
+<h2>¡Felicitaciones!</h2>
+<h3>Terminaste la {{ $root.nombreEtapa }} etapa y estos son tus resultados al momento</h3>
+
+<div class="resultado-info__list">
+  <div class="resultado-info__item resultado-info__item--left">
+    <p class="resultado-info__title">Puntaje <br>obtenido</p>
+    <p class="resultado-info__info">{{ vm.puntaje }}</p>
+  </div>
+
+  <div class="resultado-info__item resultado-info__item--right">
+    <p class="resultado-info__title">Lugar en <br>el ranking</p>
+    <p class="resultado-info__info">{{ vm.ranking }}º</p>
+  </div>
+
+  <div class="resultado-mascota"></div>
+</div>

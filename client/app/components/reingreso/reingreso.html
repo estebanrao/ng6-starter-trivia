@@ -1,0 +1,15 @@
+<h1>Ingresá tus datos para participar de la {{ $root.nombreEtapa }} etapa:</h1>
+
+<form  name="reingreso" ng-submit="vm.submitReingresoForm(reingreso.$valid)" class="registro-form" novalidate>
+  <div class="registro-form__column-container">
+    <ul>
+      <li registro-form__item>
+        <input type="text" class="input--text reingreso-form-form__input--text" id="" name="dni" ng-model="vm.form.dni" placeholder="DNI" tabindex="1" ng-required="true">
+      </li>
+    </ul>
+  </div>
+
+  <br>
+
+  <button class="btn" tabindex="2" ng-disabled="reingreso.$invalid"><span class="btn__bullet"></span>Continuar</button>
+</form>

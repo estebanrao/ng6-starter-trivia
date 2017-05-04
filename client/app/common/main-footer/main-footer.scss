@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+
+.main-footer {
+  background: $header-n-footer;
+  color: $footer-text;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1.8rem;
+
+  a {
+    color: $footer-text;
+
+    &:hover {
+      color: darken($footer-text, 30%)
+    }
+  }
+}
+
+  .main-footer__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+    .main-footer__list {
+      padding-bottom: .8rem;
+    }
+
+      .main-footer__list-item {
+        display: inline-flex;
+        margin: 0 .9rem;
+      }
+
+        .main-footer__list-bullet {
+          @include sprite-background('images/main-footer-bullet.png');
+          display: block;
+          height: 1rem;
+          margin-right: .3rem;
+          width: .6rem;
+        }
+
+@media (min-width: $screen-sm-min) {
+
+  .main-footer__container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+    .main-footer__list {
+      order: 1;
+      padding-bottom: 0;
+    }
+
+      .main-footer__list-item {
+        margin: 0 0 0 1.8rem;
+      }
+
+}

@@ -1,0 +1,169 @@
+@import 'variables';
+@import 'mixins';
+
+.main-content-trivia {
+  background: $trivia-bg url(images/bg-trivia.jpg) no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+  min-height: 43rem;
+  padding: 2rem 0;
+}
+
+  .trivia__points {
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .trivia__question {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    width: 80vw;
+  }
+
+  .trivia__answers-list {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: space-around;
+    max-width: 44rem;
+    padding: 1rem 0;
+    width: 70vw;
+  }
+
+    .trivia__answer {
+      box-sizing: border-box;
+      height: 4rem;
+      line-height: 4rem;
+      overflow: hidden;
+      padding: 0 2rem;
+      text-align: left;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+  .trivia__info-list {
+    display: flex;
+    width: 18rem;
+    justify-content: space-between;
+    font-size: 1.4rem;
+  }
+
+    .trivia__info-item {
+      align-items: center;
+      display: flex;
+      font-weight: 200;
+
+      &--time {
+        padding-top: 2rem;
+        font-size: 4.7rem
+      }
+    }
+
+    .trivia__info-icon {
+      display: block;
+      margin-right: .5rem;
+
+      &--correctas {
+        @include sprite-background('images/trivia-info-icon-correctas.png');
+        height: 2rem;
+        width: 2.6rem;
+      }
+
+      &--incorrectas {
+        @include sprite-background('images/trivia-info-icon-incorrectas.png');
+        height: 2rem;
+        width: 2rem;
+      }
+
+      &--bonus {
+        @include sprite-background('images/trivia-info-icon-bonus.png');
+        height: 2.2rem;
+        width: 2.3rem;
+      }
+
+      &--tiempo {
+        @include sprite-background('images/trivia-info-icon-tiempo.png');
+        height: 1.7rem;
+        width: 1.7rem;
+      }
+    }
+
+@media (min-width: $screen-sm-min) {
+
+  .main-content-trivia {
+    min-height: 82rem;
+    padding: 4rem 0;
+  }
+
+    .trivia__points {
+      font-size: 2.32rem;
+      padding-bottom: 1.9rem;
+    }
+
+    .trivia__question {
+      font-size: 3.7rem;
+      line-height: 4.5rem;
+    }
+
+    .trivia__answers-list {
+      height: 28.5rem;
+      padding: 2.4rem 0 5rem;
+    }
+
+      .trivia__answer {
+        height: 6.3rem;
+        line-height: 6.2rem;
+        padding: 0 2.4rem;
+      }
+
+    .trivia__info-list {
+      width: 24rem;
+      font-size: 1.9rem;
+    }
+
+      .trivia__info-item {
+        &--time {
+          padding-top: 2.4rem;
+          font-size: 6.3rem
+        }
+      }
+
+      .trivia__info-icon {
+        &--correctas {
+          height: 2.5rem;
+          width: 3.2rem;
+        }
+
+        &--incorrectas {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+
+        &--bonus {
+          height: 2.7rem;
+          width: 2.9rem;
+        }
+
+        &--tiempo {
+          height: 2.2rem;
+          width: 2.2rem;
+        }
+      }
+
+}
+
+@media (min-width: $screen-md-min) {
+
+  .main-content-trivia {
+    min-height: 60rem;
+  }
+
+    .trivia__answers-list {
+      height: 23.5rem;
+      padding: 2rem 0;
+    }
+
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <style>
+      /* Angular */
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+
+      /* Loader */
+      .circular {
+        animation: rotate 2s linear infinite;
+        bottom: 0;
+        height: 80px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform-origin: center center;
+        width: 80px;
+      }
+
+      .path {
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35px;
+        }
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124px;
+        }
+      }
+
+      @keyframes color {
+        100%,
+        0% {
+          stroke: #ff6900;
+        }
+        40% {
+          stroke: #3f82d0;
+        }
+        66% {
+          stroke: #61b51f;
+        }
+        80%,
+        90% {
+          stroke: #1fa2b4;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/notie/3.8.5/notie.min.css">
+    <base href="/">
+  </head>
+  <body ng-app="app" ng-strict-di>
+
+    <app>
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+    </app>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notie/3.8.5/notie.min.js"></script>
+  </body>
+</html>
